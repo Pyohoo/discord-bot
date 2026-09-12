@@ -18,6 +18,8 @@ client.on(Events.MessageCreate, (msg) => {
 
     if (msg.content === "!ping"){
         msg.reply("Sam się pingnij OwO")
+
+
     }
 })
 

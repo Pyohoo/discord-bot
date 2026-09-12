@@ -1,4 +1,4 @@
-const { Events, MessageFlags } = require('discord.js')
+const { Events, MessageFlags, Collection } = require('discord.js')
 
 module.exports = {
     name: Events.InteractionCreate,
@@ -18,7 +18,7 @@ module.exports = {
 
         const now = Date.now()
         const timestamps = cooldowns.get(command.data.name)
-        const defaultCooldownDuration = 3
+        const defaultCooldownDuration = 5
         const cooldownAmount = (command.cooldown ?? defaultCooldownDuration) * 1_000
 
         if (timestamps.has(interaction.user.id)) {

@@ -20,7 +20,7 @@ client.on(Events.MessageCreate, (msg) => {
         msg.reply("Sam się pingnij OwO")
     }
     if (msg.content === "!pong"){
-        msg.reply("AU")
+        msg.reply("AU ")
     }
 
 })

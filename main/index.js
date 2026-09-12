@@ -18,9 +18,11 @@ client.on(Events.MessageCreate, (msg) => {
 
     if (msg.content === "!ping"){
         msg.reply("Sam się pingnij OwO")
-
-
     }
+    if (msg.content === "!pong"){
+        msg.reply("AU")
+    }
+
 })
 
 client.login(process.env.DISCORD_BOT_TOKEN)

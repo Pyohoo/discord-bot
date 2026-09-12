@@ -30,7 +30,7 @@ const rest = new REST().setToken(process.env.DISCORD_BOT_TOKEN);
         console.log(`Rejestruję ${commands.length} komend...`);
 
         await rest.put(
-            Routes.applicationCommands(process.env.CLIENT_ID),
+            Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID),
             { body: commands }
         );
 
